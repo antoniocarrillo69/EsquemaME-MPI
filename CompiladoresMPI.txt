@@ -1,0 +1,21 @@
+Existen una gran variedad de compiladores de MPI, algunos en debian son
+instalados con
+  # aptitude install lam-runtime xmpi libmpich2-dev mpich2 mpi-default-dev mpi-default-bin openmpi-bin valgrind-mpi
+
+Para compilar y ejecutar usar alguna de estas opciones:
+mpic++           mpic++.openmpi   mpiexec.mpich    mpif90.openmpi   mpirun.lam
+mpicc            mpicxx           mpiexec.openmpi  mpifort          mpirun.mpich
+mpiCC            mpicxx.mpich     mpif77           mpifort.mpich    mpirun.openmpi
+mpicc.mpich      mpicxx.openmpi   mpif77.mpich     mpifort.openmpi  mpitask
+mpicc.openmpi    mpiexec          mpif77.openmpi   mpimsg           mpivars
+mpiCC.openmpi    mpiexec.hydra    mpif90           mpipython        
+mpichversion     mpiexec.lam      mpif90.mpich     mpirun        
+
+
+
+Para que en la ejecucion de MPI no pida la clave de usuario:
+  $ ssh-keygen -t rsa
+En cada pregunta responder con ENTER, para después copiar usando
+  $ cp ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys 
+Nota: Si continua pidiendo clave es que también esta instalado rsh o lsh
+

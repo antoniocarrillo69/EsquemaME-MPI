@@ -1,0 +1,11 @@
+// Compilar usando mpiCC
+
+  $ mpiCC me.cpp -o me -lm
+
+// Ejecutar usando 4 procesos
+
+  $ mpirun -np 4 me
+
+// Ejecuta en 4 procesadores 
+
+  $ mpirun -machinefile machines.lolb -np 4 me

@@ -1,0 +1,11 @@
+// Compilar usando mpicc
+
+  $ mpicc me.c -o me -lm
+
+// Ejecutar en 4 procesos
+ 
+  $ mpirun -np 4 me
+
+// Ejecuta en 4 procesadores 
+
+  $ mpirun -machinefile machines.lolb -np 4 me

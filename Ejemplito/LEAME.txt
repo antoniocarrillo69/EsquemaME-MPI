@@ -1,0 +1,41 @@
+Objetivo de estos programas
+
+Mostrar como paralelizar una aplicacion secuencial con el
+minimo de cambios. Para eso se desarrollo un programita 
+secuencial en donde el maestro (clase A) necesita generar 
+N objetos (clase B) e interactua con ellos enviandoles 
+numeros y arreglos, los objetos interactuan con los datos
+y los regresan al maestro modificados.
+
+En la paralelizacion, el maestro generara n esclavos y en cada
+esclavo se generaran N/n objetos los cuales mandaremos a cada 
+nodo esclavo.
+
+Por una parte se desarrollo dos versiones de paralelizacion 
+dejando intacta la clase B y remplazando la clase A con la 
+implementacion paralela de la clase A. 
+
+Por otro lado se realizo unas modificaciones al programa 
+secuencial de tal forma que se encapsulan las operaciones 
+en donde es necesario transmitir datos o dependen de la 
+paralelizacion en comportamientos dentro de la misma 
+clase y se desarrollo el ultimo esquema de paralelizacion en
+la cual se reusa todo lo desarrollado (clases A y B) dejando 
+intactas las clases secuenciales.
+
+Esta ultima version permite reusar todo el codigo secuencial y 
+solo implementar por separado la paralelizacion necesaria para
+cada comportamiento que asi lo requiera.
+
+
+Directorio            Contenido
+---------------------|-----------------------------------------------------------------
+
+Secuencial            Programa secuencial
+SecuencialModificado  Programa secuencial modificado para su facil paralelizacion
+Paralelo1             Primera version de paralelizacion del codigo Secuencial
+Paralelo2             Segunda version de paralelizacion del codigo Secuencial
+Paralelo3             Tercera version de paralelizacion del codifo SecuencialModificado
+
+
+EjemplitoME           Ejemplito en C y C++ de una aplicacion del esquema Maestro-esclavo
